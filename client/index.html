@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task Management Demo</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">Loading...</div>
+    <script>
+      const { createApp, ref } = Vue;
+      createApp({
+        setup() {
+          const tasks = ref([{ id:1, title:'Sample task', done:false }]);
+          return { tasks };
+        }
+      }).mount('#app');
+    </script>
+  </body>
+</html>
